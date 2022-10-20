@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'carSell';
+
+   text='Wach a l3chran!';
+   displayText =false;
+
+  onClickButton():void{
+    this.displayText = this.displayText ? false :true ;
+
+  }
+
 }

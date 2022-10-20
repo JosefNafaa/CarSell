@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "carsell-4d963": {
+      "hosting": {
+        "carSell": [
+          "carsell-4d963"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "carsell-4d963"
+  }
+}
