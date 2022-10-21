@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormGroup, NgForm , FormBuilder, Validators } from '@angular/forms';
-import { Observable, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { Offer } from 'src/app/interfaces/offer';
 import { OfferService } from 'src/app/services/offer.service';
 
@@ -11,11 +11,11 @@ import { OfferService } from 'src/app/services/offer.service';
 })
 export class DashboardComponent implements OnInit , OnDestroy{
 
- susbscritpion !: Subscription;
-  offerForm!: FormGroup;
- offers : Offer[] = [] ;
- currentOfferPhotoFile !: any;
- currentOfferPhotoUrl !:string;
+   susbscritpion !: Subscription;
+   offerForm!: FormGroup;
+   offers : Offer[] = [] ;
+   currentOfferPhotoFile !: any;
+   currentOfferPhotoUrl !:string;
   constructor(
     private formBuilder: FormBuilder,
     private offerService :OfferService
@@ -105,6 +105,7 @@ this.offerService.getOffer();
 
   }
   ngOnDestroy(): void {
-   this.susbscritpion.unsubscribe;
+    if(this.susbscritpion && !this.susbscritpion.closed)
+    this.susbscritpion.unsubscribe;
   }
 }
