@@ -16,6 +16,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from 'src/environments/environment';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { SignupComponent } from './auth/signup/signup.component';
 
 registerLocaleData(localeFr);
 @NgModule({
@@ -24,7 +25,8 @@ registerLocaleData(localeFr);
     HeaderComponent,
     HomeComponent,
     PageErrorComponent,
-    FooterComponent
+    FooterComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
